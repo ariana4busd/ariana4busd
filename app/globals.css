@@ -9,6 +9,10 @@
   --🎨primary: hsl(175deg 24% 19%);
   --🎨primary_accent: hsl(173deg 100% 80%);
   --🎨primary_text1: hsl(176deg 74% 92%);
+
+  --🎨secondary: hsl(176deg 67% 39%);
+  --🎨secondary_accent: hsl(176deg 67% 79%);
+  --🎨secondary_text1: hsl(176deg 67% 4%);
 }
 
 * {
