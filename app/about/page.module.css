@@ -1,0 +1,7 @@
+.section h1 {
+  color: var(--🎨primary);
+}
+
+.section:last-of-type {
+  margin-block-end: 8rem;
+}
