@@ -3,6 +3,7 @@
   --min-touch: 48px;
 
   --🎨page: hsl(0deg 0% 96%);
+  --🎨page_accent: hsl(176deg 67% 37%);
   --🎨page_text1: hsl(0deg 0% 0%);
   --🎨page_text2: hsl(0deg 0% 30%);
 
@@ -12,7 +13,7 @@
 
   --🎨secondary: hsl(176deg 67% 39%);
   --🎨secondary_accent: hsl(176deg 67% 79%);
-  --🎨secondary_text1: hsl(176deg 67% 4%);
+  --🎨secondary_text1: hsl(176deg 67% 10%);
 }
 
 * {
