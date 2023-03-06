@@ -1,7 +1,7 @@
-import "./globals.css";
-import { cn } from "./helpers";
-import { Icon } from "./icon";
-import css from "./layout.module.css";
+import "@app/globals.css";
+import { Icon } from "@app/icon";
+import css from "@app/layout.module.css";
+import { cn } from "@utils/classnames";
 
 export default function RootLayout({ children }) {
   return (

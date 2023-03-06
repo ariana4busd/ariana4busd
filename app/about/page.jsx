@@ -1,4 +1,4 @@
-import css from "./page.module.css";
+import css from "@about/page.module.css";
 
 export const metadata = {
   title: "About Ariana",

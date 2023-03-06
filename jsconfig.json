@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@app/*": ["./app/*"],
+      "@about/*": ["./app/about/*"],
+      "@involve/*": ["./app/get-involved/*"],
+      "@utils/*": ["./utils/*"]
     }
   }
 }

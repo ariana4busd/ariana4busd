@@ -1,5 +1,5 @@
 "use client";
-import css from "./form.module.css";
+import css from "@involve/form.module.css";
 
 export function Form() {
   const handleSubmit = async (event) => {
