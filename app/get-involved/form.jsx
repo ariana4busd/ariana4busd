@@ -79,7 +79,7 @@ export function Form() {
         </label>
 
         <label>
-          <input type="checkbox" readonly />
+          <input type="checkbox" />
           <span>Other</span>
           <input name="help_other" type="text" />
         </label>
