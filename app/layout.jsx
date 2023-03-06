@@ -3,6 +3,8 @@ import { Icon } from "@app/icon";
 import { IconSymbols } from "@app/icon-symbols";
 import css from "@app/layout.module.css";
 import { cn } from "@utils/classnames";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function RootLayout({ children }) {
   return (
@@ -10,41 +12,41 @@ export default function RootLayout({ children }) {
       <body>
         <IconSymbols />
         <header className={cn(css.header, "full_bleed")}>
-          <nav className={css.primary_links}>
-            <a className={css.home_link} href="/">
+          <nav className={css.nav_top}>
+            <Link className={css.nav_home} href="/">
               <span className="visually_hidden">Home</span>
-              <img src="logo.svg" alt="" />
-            </a>
-            <a href="/about">About</a>
-            <a href="/get-involved">Get Involved</a>
-            <a href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
+              <Image src="logo.svg" alt="" fill />
+            </Link>
+            <Link href="/about">About</Link>
+            <Link href="/get-involved">Get Involved</Link>
+            <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
               Donate
-            </a>
+            </Link>
           </nav>
         </header>
 
         {children}
 
         <footer className={cn(css.footer, "full_bleed")}>
-          <nav className={css.social_links}>
-            <a href="" hidden={true}>
+          <nav className={css.nav_social}>
+            <Link href="" hidden={true}>
               <span className="visually_hidden">Facebook</span>
               <Icon id="ic_facebook" />
-            </a>
-            <a href="https://instagram.com/ariana4busd">
+            </Link>
+            <Link href="https://instagram.com/ariana4busd">
               <span className="visually_hidden">Instagram</span>
               <Icon id="ic_instagram" />
-            </a>
-            <a href="https://twitter.com/ariana4busd">
+            </Link>
+            <Link href="https://twitter.com/ariana4busd">
               <span className="visually_hidden">Twitter</span>
               <Icon id="ic_twitter" />
-            </a>
+            </Link>
           </nav>
 
-          <a className={css.home_link} href="/">
+          <Link className={css.nav_home} href="/">
             <span className="visually_hidden">Home</span>
-            <img src="logo.svg" alt="" />
-          </a>
+            <Image src="logo.svg" alt="" fill />
+          </Link>
 
           {/* <!-- https://www.fppc.ca.gov/learn/campaign-rules/campaign-advertising-requirements-restrictions.html --> */}
           <p className={css.campaign_ad_disclosure}>
