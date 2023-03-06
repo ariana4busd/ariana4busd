@@ -1,6 +1,8 @@
+import css from "@app/page.module.css";
+import { cn } from "@utils/classnames";
 import Image from "next/image";
-import { cn } from "./helpers";
-import css from "./page.module.css";
+import Link from "next/link";
+import { Icon } from "./icon";
 
 export const metadata = {
   title: "Ariana for School Board",
@@ -10,7 +12,7 @@ export default function Home() {
   return (
     <>
       <section className={css.cover}>
-        <img src="/portrait/headshot-01.webp" alt="" />
+        <Image src="/portrait/headshot-01.webp" alt="" fill priority />
         <div className={css.cover_text}>
           <div className={css.cover_name}>Ariana Martinez</div>
           <div className={css.cover_slogan}>
@@ -20,11 +22,9 @@ export default function Home() {
       </section>
 
       <section className={css.intro} aria-label="Introduction">
-        <img
-          className={css.intro_img}
-          src="/portrait/headshot-04.webp"
-          alt=""
-        />
+        <div className={css.intro_img}>
+          <Image src="/portrait/headshot-04.webp" alt="" fill />
+        </div>
         <div>
           <p>
             My name is Ariana Martinez and I am privileged to have the
@@ -41,7 +41,7 @@ export default function Home() {
           </p>
           <p>
             I know firsthand the importance of equity in education from my
-            personal experience advocating for my sister’s educational and
+            personal experience advocating for my sister{"'"}s educational and
             mental health needs with her IEP, as well as my professional
             experience supporting foster youth and other vulnerable populations.
           </p>
@@ -60,31 +60,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={cn(css.priorities, "full_bleed")}>
+      <section className={css.vote}>
+        <h1>Vote April 11, 2023</h1>
+        <Link href="/get-involved#vote">
+          <Icon id="ic_location" />
+          <span>View Trustee Area 5</span>
+        </Link>
+      </section>
+
+      <section className={cn(css.list, css.priority, "full_bleed")}>
         <h1>Priorities</h1>
         <dl>
-          <div className={css.priority}>
+          <div className={css.priority_card}>
             <dt>Student Wellness</dt>
             <dd>
               Ensuring social, emotional, and behavioral supports to reduce
               stress and promote resilience in schools
             </dd>
           </div>
-          <div className={css.priority}>
+          <div className={css.priority_card}>
             <dt>Student Success for All</dt>
             <dd>
               Appreciating the different strengths of all students to generate
               opportunities for each student to thrive
             </dd>
           </div>
-          <div className={css.priority}>
+          <div className={css.priority_card}>
             <dt>Transparency and Trust</dt>
             <dd>
               Delineating a communication structure to disseminate key decisions
               that impact students, educators, and the community
             </dd>
           </div>
-          <div className={css.priority}>
+          <div className={css.priority_card}>
             <dt>Collaboration and Community</dt>
             <dd>
               Leveraging the strengths of our community to find creative
@@ -94,7 +102,7 @@ export default function Home() {
         </dl>
       </section>
 
-      <section className={css.endorsements}>
+      <section className={cn(css.list, css.endorsements)}>
         <h1>Endorsements</h1>
         <dl>
           <div className={css.endorsement}>
@@ -119,7 +127,11 @@ export default function Home() {
           </div>
           <div className={css.endorsement}>
             <dt>Monica Brown</dt>
-            <dd>Solano County Board of Supervisor</dd>
+            <dd>Solano County Supervisor</dd>
+          </div>
+          <div className={css.endorsement}>
+            <dt>Michael Minahen</dt>
+            <dd>Associate Superintendent of Human Resources and Educator </dd>
           </div>
           <div className={css.endorsement}>
             <dt>Sheri Zada</dt>

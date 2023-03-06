@@ -1,5 +1,7 @@
 .cover,
 .intro,
+.vote,
+.priorities,
 .endorsements {
   margin-block-end: 4rem;
 }
@@ -8,15 +10,15 @@
   position: relative;
   grid-column: 1/-1;
   display: grid;
-  grid-template: "stack" 1fr / 1fr;
+  grid-template: "stack" minmax(512px, 50vw) / 1fr;
 }
 
 .cover::before,
 .cover::after {
+  z-index: 1;
   grid-area: stack;
   content: "";
   width: 100%;
-  z-index: 1;
 }
 
 .cover::before {
@@ -36,21 +38,19 @@
 
 .cover img {
   grid-area: stack;
-  width: 100%;
-  aspect-ratio: 4/3;
   object-fit: cover;
   object-position: top center;
-  max-height: 756px;
 }
 
 .cover_text {
+  z-index: 2;
   grid-area: stack;
   place-self: end center;
   display: grid;
   place-items: center;
   color: white;
-  z-index: 2;
-  margin-block-end: 10%;
+  padding: 1rem;
+  margin-block-end: 5%;
 }
 
 .cover_name {
@@ -63,68 +63,118 @@
   font-size: 1.75rem;
 }
 
-.intro img {
-  width: clamp(64px, 50vw, 420px);
-  margin: 1rem 2rem 1rem 0;
+.intro_img {
   float: left;
+  position: relative;
+  width: clamp(64px, 50vw, 320px);
+  margin: 1rem 2rem 1rem 0;
+  aspect-ratio: 3/4;
 }
 
-:is(.priorities, .endorsements) h1 {
-  font-size: 2.25rem;
+.vote {
+  border-top: 4px dashed var(--🎨page_accent);
+  display: grid;
+  justify-items: center;
+  margin-inline: 3rem;
+}
+
+.vote h1 {
   margin-block: 2rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--🎨page_accent);
 }
 
-:is(.priorities, .endorsements) dl {
+.vote a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: var(--min-touch);
+  min-width: var(--min-touch);
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background: var(--🎨secondary);
+  color: var(--🎨secondary_text1);
+  border-radius: 5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vote a svg {
+  width: var(--min-touch);
+  height: var(--min-touch);
+}
+
+.list h1 {
+  font-size: 3rem;
+  margin-block: 3rem;
+  justify-self: center;
+}
+
+.list dl {
   display: grid;
   margin: 0;
 }
 
-:is(.priorities, .endorsements) dt {
+.list dt {
   font-size: 1.25rem;
-}
-
-:is(.priorities, .endorsements) dd {
   margin: 0;
 }
 
-.priorities {
-  background: var(--🎨primary);
-  color: var(--🎨primary_text1);
-  gap: 1rem;
-  padding-block-end: 4rem;
+.list dd {
+  margin: 0;
 }
 
-.priorities h1 {
+.priority {
+  gap: 1rem;
+  padding-block-end: 8rem;
+  background: var(--🎨primary);
+  color: var(--🎨primary_text1);
+}
+
+.priority h1 {
   color: var(--🎨primary_accent);
 }
 
-.priorities dl {
+.priority dl {
   grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-  gap: 1rem;
+  gap: 2rem 2.5rem;
+}
+
+.priority_card {
+  display: grid;
+  grid-template:
+    "dt" 4rem
+    "dd" min-content
+    / 1fr;
+}
+
+.priority_card dt {
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.endorsements {
+  display: grid;
 }
 
 .endorsements h1 {
-  color: var(--🎨primary);
   justify-self: center;
-}
-
-.priorities dt {
-  font-weight: 500;
-  margin-block-end: 1rem;
+  color: var(--🎨primary);
 }
 
 .endorsements dl {
   grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
   gap: 2rem;
-  color: black;
 }
 
 .endorsement {
-  border-top: 1px solid currentColor;
+  border-top: 2px solid var(--🎨primary);
 }
 
 .endorsement dt {
-  font-weight: 500;
+  font-weight: 600;
+  margin-block: 0.25rem;
 }
 
 .endorsement dd {
