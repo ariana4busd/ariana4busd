@@ -31,10 +31,10 @@ export default function About() {
           statistical, research, and leadership experience in the areas of
           cognitive psychology, social sciences, organizational development, and
           education. This experience helped her better advocate for her younger
-          sister's mental health and special education needs within the Benicia
-          Unified School District. Ariana also continued to show support for the
-          arts in Benicia schools through the years and coached Benicia Middle
-          School students as a Colorguard Instructor.
+          sister&aposs mental health and special education needs within the
+          Benicia Unified School District. Ariana also continued to show support
+          for the arts in Benicia schools through the years and coached Benicia
+          Middle School students as a Colorguard Instructor.
         </p>
       </section>
       <section className={css.education}>

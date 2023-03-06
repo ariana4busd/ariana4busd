@@ -75,7 +75,7 @@ export function Form() {
 
         <label>
           <input name="help_unsure" type="checkbox" />
-          <span>I'm not sure, but I'm still interested in helping</span>
+          <span>I&aposm not sure, but I&aposm still interested in helping</span>
         </label>
 
         <label>
