@@ -1,5 +1,6 @@
 :root {
   --max-width: 1024px;
+  --max-narrow-width: 512px;
   --min-touch: 48px;
 
   --🎨page: hsl(0deg 0% 96%);

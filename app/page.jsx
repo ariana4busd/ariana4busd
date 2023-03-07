@@ -62,7 +62,7 @@ export default function Home() {
 
       <section className={css.vote}>
         <h1>Vote April 11, 2023</h1>
-        <Link href="/get-involved#vote">
+        <Link href="/vote">
           <Icon id="ic_location" />
           <span>View Trustee Area 5</span>
         </Link>

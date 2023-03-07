@@ -4,7 +4,10 @@
       "~/*": ["./*"],
       "@app/*": ["./app/*"],
       "@about/*": ["./app/about/*"],
-      "@involve/*": ["./app/get-involved/*"],
+      "@support/*": ["./app/(support)/*"],
+      "@vote/*": ["./app/(support)/vote/*"],
+      "@request-sign/*": ["./app/(support)/request-sign/*"],
+      "@volunteer/*": ["./app/(support)/volunteer/*"],
       "@utils/*": ["./utils/*"]
     }
   }

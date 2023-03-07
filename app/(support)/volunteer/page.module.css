@@ -1,0 +1,4 @@
+.section {
+  max-width: var(--max-narrow-width);
+  margin-inline: auto;
+}

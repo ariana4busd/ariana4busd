@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
               <Image src="logo.svg" alt="" fill />
             </Link>
             <Link href="/about">About</Link>
-            <Link href="/get-involved">Get Involved</Link>
+            <Link href="/vote">Get Involved</Link>
             <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
               Donate
             </Link>
