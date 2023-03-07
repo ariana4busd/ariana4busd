@@ -19,11 +19,7 @@ export default function RootLayout({ children }) {
             </Link>
             <Link href="/about">About</Link>
             <Link href="/vote">Get Involved</Link>
-            <Link
-              href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
               Donate
             </Link>
           </nav>
