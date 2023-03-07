@@ -72,6 +72,9 @@ export default function Home() {
         <h1>Priorities</h1>
         <dl>
           <div className={css.priority_card}>
+            <picture>
+              <Image src="/home/student_wellness.webp" alt="" fill />
+            </picture>
             <dt>Student Wellness</dt>
             <dd>
               Ensuring social, emotional, and behavioral supports to reduce
@@ -79,6 +82,9 @@ export default function Home() {
             </dd>
           </div>
           <div className={css.priority_card}>
+            <picture>
+              <Image src="/home/student_success.webp" alt="" fill />
+            </picture>
             <dt>Student Success for All</dt>
             <dd>
               Appreciating the different strengths of all students to generate
@@ -86,6 +92,9 @@ export default function Home() {
             </dd>
           </div>
           <div className={css.priority_card}>
+            <picture>
+              <Image src="/home/trust.webp" alt="" fill />
+            </picture>
             <dt>Transparency and Trust</dt>
             <dd>
               Delineating a communication structure to disseminate key decisions
@@ -93,6 +102,9 @@ export default function Home() {
             </dd>
           </div>
           <div className={css.priority_card}>
+            <picture>
+              <Image src="/home/collaboration.webp" alt="" fill />
+            </picture>
             <dt>Collaboration and Community</dt>
             <dd>
               Leveraging the strengths of our community to find creative
@@ -131,7 +143,10 @@ export default function Home() {
           </div>
           <div className={css.endorsement}>
             <dt>Michael Minahen</dt>
-            <dd>Associate Superintendent of Human Resources and Educator </dd>
+            <dd>
+              Associate Superintendent of Human Resources and Educator, Solano
+              County Office of Education{" "}
+            </dd>
           </div>
           <div className={css.endorsement}>
             <dt>Sheri Zada</dt>

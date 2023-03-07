@@ -144,12 +144,21 @@
 .priority_card {
   display: grid;
   grid-template:
+    "icon" min-content
     "dt" 4rem
     "dd" min-content
     / 1fr;
 }
 
+.priority_card picture {
+  position: relative;
+  width: 33%;
+  margin: 1rem 33%;
+  aspect-ratio: 1/1;
+}
+
 .priority_card dt {
+  justify-self: center;
   font-weight: 700;
   font-size: 1.35rem;
 }
