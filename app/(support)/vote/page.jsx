@@ -20,7 +20,12 @@ export default function Vote() {
         <p>Please see the map for Trustee Area 5 and the polling location</p>
       </div>
 
-      <Link className={css.register} href="https://registertovote.ca.gov/">
+      <Link
+        className={css.register}
+        href="https://registertovote.ca.gov/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image src="/vote.png" alt="" width={64} height={64} />
         Register to Vote
       </Link>
