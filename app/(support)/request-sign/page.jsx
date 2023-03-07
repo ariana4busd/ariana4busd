@@ -6,7 +6,7 @@ export default function RequestSign() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
-    const response = await fetch("/api/get-involved", {
+    const response = await fetch("/api/contact-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,12 +16,11 @@ export default function RequestSign() {
         email: form.email.value,
         phone: form.phone.value,
         address: form.address.value,
-        request_sign: true,
+        requestSign: true,
       }),
     });
 
-    const result = await response.json();
-    console.log(result);
+    console.log(response.status);
   };
 
   return (

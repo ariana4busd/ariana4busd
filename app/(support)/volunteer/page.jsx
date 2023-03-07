@@ -6,7 +6,7 @@ export default function Volunteer() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
-    const response = await fetch("/api/get-involved", {
+    const response = await fetch("/api/contact-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -15,15 +15,14 @@ export default function Volunteer() {
         name: form.name.value,
         email: form.email.value,
         phone: form.phone.value,
-        share_info: form.share_info.checked,
-        host_meet_greet: form.host_meet_greet.checked,
-        help_unsure: form.help_unsure.checked,
-        help_other: form.help_other.value,
+        shareInfo: form.share_info.checked,
+        hostMeetAndGreet: form.host_meet_greet.checked,
+        helpUnsure: form.help_unsure.checked,
+        helpOther: form.help_other.value,
       }),
     });
 
-    const result = await response.json();
-    console.log(result);
+    console.log(response.status);
   };
 
   return (
