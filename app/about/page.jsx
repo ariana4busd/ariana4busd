@@ -91,50 +91,47 @@ export default function About() {
         </div>
       </section>
 
-      <section className={css.section}>
+      <section className={cn(css.section, "full_bleed")}>
         <h1>Professional Experience</h1>
-        <div className={cn(css.stagger, css.reverse)}>
-          <picture className={css.experience}>
-            <Image src="/about/experience.jpg" alt="" fill />
-          </picture>
-          <div>
-            <p>
-              After graduating, Ariana worked as a Social Worker for Contra
-              Costa County Children and Family Services and has since been
-              promoted to a Staff Development Specialist, applying her child
-              welfare experience to train new Social Workers and support the
-              workforce in serving children, families, and communities through
-              the pandemic. She learned to quickly pivot to meet the needs of
-              her staff from various backgrounds and levels of experiences by
-              adapting curriculum to a hybrid training model and developing new
-              simulation curriculum to better prepare them for the field.
-            </p>
-            <p>
-              While working full time, Ariana has continued her professional
-              development as a Licensed Clinical Social Worker, keeping her
-              clinical skills sharp on the most recent research and best
-              practices for serving children and youth to support their social,
-              emotional, and behavioral health. Outside of work, Ariana helped
-              her local community by developing and facilitating the
-              Understanding Mental Health class for Northgate Church. This class
-              opened her eyes to the changes that are possible in people{"'"}s
-              lives when they come together to share their experiences with one
-              another.
-            </p>
-            <p>
-              As a Social Worker caring for foster and at-risk youth, Ariana
-              worked one-on-one with children and youth from ages 0 to 21 and
-              their parents as they navigated the child welfare system. She
-              assessed and supported the safety, permanency, and well-being of
-              the children and youth she served. She has established successful
-              working relationships with various stakeholders including parents,
-              school staff, service providers, and community members to assess
-              and support specialized needs of children and families. Her hope
-              is through collaboration and transparency, she can support our
-              public schools to work towards creative solutions that ensure
-              success for all students within the community.
-            </p>
-          </div>
+        <picture className={css.experience}>
+          <Image src="/about/experience.jpg" alt="" fill />
+        </picture>
+        <div>
+          <p>
+            After graduating, Ariana worked as a Social Worker for Contra Costa
+            County Children and Family Services and has since been promoted to a
+            Staff Development Specialist, applying her child welfare experience
+            to train new Social Workers and support the workforce in serving
+            children, families, and communities through the pandemic. She
+            learned to quickly pivot to meet the needs of her staff from various
+            backgrounds and levels of experiences by adapting curriculum to a
+            hybrid training model and developing new simulation curriculum to
+            better prepare them for the field.
+          </p>
+          <p>
+            While working full time, Ariana has continued her professional
+            development as a Licensed Clinical Social Worker, keeping her
+            clinical skills sharp on the most recent research and best practices
+            for serving children and youth to support their social, emotional,
+            and behavioral health. Outside of work, Ariana helped her local
+            community by developing and facilitating the Understanding Mental
+            Health class for Northgate Church. This class opened her eyes to the
+            changes that are possible in people{"'"}s lives when they come
+            together to share their experiences with one another.
+          </p>
+          <p>
+            As a Social Worker caring for foster and at-risk youth, Ariana
+            worked one-on-one with children and youth from ages 0 to 21 and
+            their parents as they navigated the child welfare system. She
+            assessed and supported the safety, permanency, and well-being of the
+            children and youth she served. She has established successful
+            working relationships with various stakeholders including parents,
+            school staff, service providers, and community members to assess and
+            support specialized needs of children and families. Her hope is
+            through collaboration and transparency, she can support our public
+            schools to work towards creative solutions that ensure success for
+            all students within the community.
+          </p>
         </div>
       </section>
     </>

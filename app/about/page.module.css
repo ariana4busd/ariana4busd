@@ -46,7 +46,6 @@
 
 .bg2 img {
   object-fit: cover;
-  /* object-position: bottom right; */
 }
 
 .bg3 {
@@ -60,19 +59,30 @@
   object-position: bottom left;
 }
 
-.education {
+.educationx {
   flex-shrink: 0.75;
   width: 512px;
   aspect-ratio: 640/960;
 }
 
-.experience {
+.experiencex {
   flex-shrink: 0.1;
   width: clamp(128px, 100vw, 256px);
   aspect-ratio: 1024/1280;
 }
 
-.experience img {
+.experiencex img {
   /* object-fit: cover; */
+  object-fit: contain;
+}
+
+picture.experience {
+  display: flex;
+  position: relative;
+  width: 320px;
+  aspect-ratio: 4/5;
+}
+
+picture.experience img {
   object-fit: contain;
 }
