@@ -153,8 +153,8 @@ export default function Home() {
           <div className={css.endorsement}>
             <dt>Michael Minahen</dt>
             <dd>
-              Associate Superintendent of Human Resources and Educator, Solano
-              County Office of Education{" "}
+              Associate Superintendent of Human Resources and Educator Effectiveness, Solano
+              County Office of Education
             </dd>
           </div>
           <div className={css.endorsement}>
