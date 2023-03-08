@@ -29,7 +29,6 @@ export default function Volunteer() {
 
   return (
     <section className={css.section}>
-      <h1>Volunteer</h1>
       <p>
         Sign up today to help elect Ariana. We{"'"}re in this together. Every
         bit of help, no matter the time or amount makes a difference. Thank you
@@ -38,8 +37,8 @@ export default function Volunteer() {
         opportunities based on your selection(s).
       </p>
 
-      <form className={cssf.form} onSubmit={handleSubmit}>
-        <label className={cssf.name}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <label>
           <span>Name</span>
           <input name="name" type="text" />
         </label>
