@@ -1,3 +1,4 @@
+"use client";
 import "@app/globals.css";
 import { Icon } from "@app/icon";
 import { IconSymbols } from "@app/icon-symbols";
@@ -5,22 +6,32 @@ import css from "@app/layout.module.css";
 import { cn } from "@utils/classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const ctaActiveCn = ["/vote", "/request-sign", "volunteer"].includes(pathname)
+    ? "active"
+    : undefined;
+
   return (
     <html lang="en">
       <body>
         <IconSymbols />
         <header className={cn(css.header, "full_bleed")}>
-          <nav className={css.nav_top}>
-            <Link className={css.nav_home} href="/">
+          <nav className={css.top_nav}>
+            <Link className={cn(css.logo, css.top_nav_home)} href="/">
               <span className="visually_hidden">Home</span>
               <Image src="logo.svg" alt="" fill />
             </Link>
-            <Link href="/about">About</Link>
-            <Link href="/vote">Get Involved</Link>
-            <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
-              Donate
+            <div className={css.top_nav_links}>
+              <Link href="/about">About</Link>
+              <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
+                Donate
+              </Link>
+            </div>
+            <Link className={cn(css.top_nav_cta, ctaActiveCn)} href="/vote">
+              Get Involved
             </Link>
           </nav>
         </header>
@@ -28,7 +39,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className={cn(css.footer, "full_bleed")}>
-          <nav className={css.nav_social}>
+          <nav className={css.social_nav}>
             <Link href="" hidden={true}>
               <span className="visually_hidden">Facebook</span>
               <Icon id="ic_facebook" />
@@ -43,7 +54,7 @@ export default function RootLayout({ children }) {
             </Link>
           </nav>
 
-          <Link className={css.nav_home} href="/">
+          <Link className={cn(css.logo, css.footer_nav_home)} href="/">
             <span className="visually_hidden">Home</span>
             <Image src="logo.svg" alt="" fill />
           </Link>

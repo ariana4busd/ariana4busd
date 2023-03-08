@@ -3,15 +3,75 @@
   color: var(--🎨primary_text1);
 }
 
-.header {
-  padding-block: 0.5rem;
+/* navigation links */
+:is(.top_nav, .nav_social) a {
+  display: inline-flex;
+  align-items: center;
+  min-width: var(--min-touch);
+  min-height: var(--min-touch);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* home logo */
+.logo {
+  position: relative;
+  aspect-ratio: 3/2;
+}
+
+/* top navgiation */
+.top_nav {
+  z-index: 2;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template:
+    "logo links" min-content
+    "cta cta" 0rem
+    /1fr 1fr;
+  align-items: center;
+  gap: 0 1rem;
+  margin-inline: -1rem;
+}
+
+.top_nav a {
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.top_nav_home {
+  height: 4rem;
+  margin: 0.5rem;
+}
+
+.top_nav_links {
+  display: flex;
+  gap: 1rem;
+  margin-inline: auto 1rem;
+}
+
+a.top_nav_cta {
+  top: 1rem;
+  grid-area: cta;
+  justify-self: end;
+  margin-top: 5rem;
+  margin-inline-end: 0rem;
+  background: var(--🎨secondary);
+  color: var(--🎨primary_text1);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding-inline: 2rem 1rem;
+}
+
+a.top_nav_cta:global(.active) {
+  display: none;
 }
 
 .footer {
   gap: 1rem;
+  justify-items: center;
   min-height: 25vh;
   padding-block: 1rem;
-  justify-items: center;
 }
 
 /* scroll bounce background */
@@ -19,58 +79,62 @@
   z-index: -1;
   position: fixed;
   inset: auto 0 0 0;
-  width: 100vw;
+  width: 100vmax;
   height: 25vh;
   background: var(--🎨primary);
   content: "";
 }
 
-/* navigation links */
-:is(.nav_top, .nav_social) a {
-  min-width: var(--min-touch);
-  min-height: var(--min-touch);
-  text-decoration: none;
-  color: inherit;
-  display: inline-flex;
-}
-
-/* top navgiation */
-.nav_top {
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
-}
-
-.nav_top a {
-  align-items: flex-end;
-  padding: 0.5rem;
-  font-weight: 700;
-  font-size: 1.125rem;
+.footer_nav_home {
+  width: clamp(48px, 50vw, 320px);
+  margin: auto;
 }
 
 /* social media links */
-.nav_social {
+.social_nav {
   display: flex;
   gap: 1rem;
-  justify-self: end;
 }
 
-.nav_social svg {
+.social_nav svg {
   width: var(--min-touch);
   height: var(--min-touch);
 }
 
-/* home link */
-a.nav_home {
-  position: relative;
-  width: clamp(48px, 25vw, 128px);
-  padding: 0;
-  margin-inline-start: -0.5rem;
-  margin-inline-end: auto;
-  aspect-ratio: 3/2;
+.campaign_ad_disclosure {
+  text-align: center;
 }
 
-.footer a.nav_home {
-  width: clamp(48px, 50vw, 320px);
-  margin: auto;
+@media (min-width: 475px) {
+  .top_nav {
+    grid-template:
+      "logo links cta" min-content
+      / min-content 1fr max-content;
+  }
+
+  .top_nav_home {
+    height: clamp(48px, 10vw, 96px);
+    margin: 0.5rem;
+  }
+
+  .top_nav_links {
+    margin-inline-end: 0;
+  }
+
+  a.top_nav_cta {
+    border-radius: 2rem;
+    padding-inline: 1rem;
+    margin: 0;
+    margin-inline-end: 1rem;
+  }
+
+  a.top_nav_cta:global(.active) {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 640px) {
+  .top_nav {
+    gap: 0 2rem;
+  }
 }
