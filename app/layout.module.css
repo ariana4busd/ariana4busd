@@ -94,6 +94,7 @@ a.top_nav_cta:global(.active) {
 
 .footer_nav_home {
   width: clamp(48px, 50vw, 320px);
+  aspect-ratio: 1/1;
   margin: auto;
 }
 

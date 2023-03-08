@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
 
           <Link className={cn(css.logo, css.footer_nav_home)} href="/">
             <span className="visually_hidden">Home</span>
-            <Image src="logo.svg" alt="" fill />
+            <Image src="/logo2.webp" alt="" fill />
           </Link>
 
           {/* <!-- https://www.fppc.ca.gov/learn/campaign-rules/campaign-advertising-requirements-restrictions.html --> */}
