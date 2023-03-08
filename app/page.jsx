@@ -164,6 +164,10 @@ export default function Home() {
             <dt>Andre Stewart</dt>
             <dd>Former Benicia Unified School Board Member</dd>
           </div>
+          <div className={css.endorsement}>
+            <dt>Gary Wing</dt>
+            <dd>Former Benicia Unified School Board Member</dd>
+          </div>
         </dl>
       </section>
     </>
