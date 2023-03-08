@@ -12,7 +12,7 @@ export default function About() {
       <section className={css.section}>
         <picture className={cn(css.pic_bg1, "left")}>
           <Image
-            src="/about/background_1.jpg"
+            src="/about/bg_1.avif"
             alt=""
             sizes="(max-width: 768px) 100vw, 320px"
             style={{ objectFit: "cover", objectPosition: "center bottom" }}
@@ -51,7 +51,7 @@ export default function About() {
         <div className={css.film_strip}>
           <picture className={css.pic_bg2}>
             <Image
-              src="/about/background_2.jpg"
+              src="/about/bg_2.avif"
               alt=""
               sizes="(max-width: 768px) 100vw, 320px"
               style={{ objectFit: "cover", objectPosition: "center top" }}
@@ -60,10 +60,19 @@ export default function About() {
           </picture>
           <picture className={css.pic_bg3}>
             <Image
-              src="/about/background_3.jpg"
+              src="/about/bg_3.avif"
               alt=""
               sizes="(max-width: 768px) 100vw, 320px"
               style={{ objectFit: "cover", objectPosition: "bottom center" }}
+              fill
+            />
+          </picture>
+          <picture className={css.pic_bg4}>
+            <Image
+              src="/about/bg_4.avif"
+              alt=""
+              sizes="(max-width: 768px) 100vw, 320px"
+              style={{ objectFit: "cover", objectPosition: "center left" }}
               fill
             />
           </picture>
@@ -74,9 +83,10 @@ export default function About() {
         <div>
           <picture className={cn(css.pic_edu, "right")}>
             <Image
-              src="/about/education.jpg"
+              src="/about/education.avif"
               alt=""
               sizes="(max-width: 768px) 100vw, 320px"
+              style={{ objectFit: "cover", objectPosition: "center top" }}
               fill
             />
           </picture>
@@ -106,9 +116,10 @@ export default function About() {
       <section className={cn(css.section, css.exp)}>
         <picture className={cn(css.pic_exp, "left")}>
           <Image
-            src="/about/experience.jpg"
+            src="/about/experience.avif"
             alt=""
             sizes="(max-width: 768px) 100vw, 320px"
+            style={{ objectFit: "cover", objectPosition: "center top" }}
             fill
           />
         </picture>

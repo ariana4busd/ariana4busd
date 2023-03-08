@@ -37,10 +37,11 @@
 .film_strip {
   display: flex;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .film_strip > picture {
-  height: 320px;
+  height: clamp(128px, 50vw, 320px);
 }
 
 .pic_bg1 {
@@ -53,6 +54,10 @@
 
 .pic_bg3 {
   aspect-ratio: 4/3;
+}
+
+.pic_bg3 {
+  aspect-ratio: 3024/4032;
 }
 
 .pic_edu {
