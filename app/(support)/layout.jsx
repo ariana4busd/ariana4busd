@@ -1,8 +1,8 @@
 "use client";
 import css from "@support/layout.module.css";
+import { cn } from "@utils/classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "~/utils/classnames";
 
 export default function GetInvolvedLayout({ children }) {
   const pathname = usePathname();
