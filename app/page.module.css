@@ -194,3 +194,14 @@
 .endorsement dd {
   color: var(--🎨page_text2);
 }
+
+@media (min-width: 900px) {
+  .intro {
+    display: flex;
+    align-items: flex-start;
+  }
+  .intro_img {
+    min-width: 320px;
+    float: none;
+  }
+}
