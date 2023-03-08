@@ -42,6 +42,8 @@ function parseContactForm({
   helpUnsure = false,
   helpOther = "",
 }) {
+  // TODO add server side form validation
+
   const toggleCheckbox = (condition) => (condition ? "☑️" : "");
 
   return [

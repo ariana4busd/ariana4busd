@@ -3,6 +3,8 @@ import cssf from "@support/form.module.css";
 import css from "@volunteer/page.module.css";
 
 export default function Volunteer() {
+  // TODO validate volunteer form
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;

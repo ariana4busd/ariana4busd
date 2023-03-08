@@ -3,6 +3,8 @@ import cssf from "@support/form.module.css";
 import css from "@request-sign/page.module.css";
 
 export default function RequestSign() {
+  // TODO validate yard sign request form
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
