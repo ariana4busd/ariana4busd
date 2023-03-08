@@ -6,7 +6,6 @@ const SHEETS_ID = process.env.SHEETS_ID;
 export async function POST(request) {
   const data = await request.json();
   const contact = parseContactForm(data);
-  console.log(contact, data);
 
   // TODO rate limit access to api
 
@@ -25,8 +24,10 @@ export async function POST(request) {
       resource: { values: [contact] },
     });
 
+    console.log(contact);
     return new Response("", { status: 200 });
   } catch (err) {
+    console.log(err);
     return new Response("", { status: 500 });
   }
 }
