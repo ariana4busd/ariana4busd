@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className={cn(css.footer, "full_bleed")}>
+          {/* TODO connect socials */}
           <nav className={css.social_nav}>
             <Link href="" hidden={true}>
               <span className="visually_hidden">Facebook</span>
