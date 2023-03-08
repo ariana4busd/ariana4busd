@@ -1,20 +1,21 @@
 .get_involved h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
+  margin-block: 2rem 1rem;
 }
 
 .get_involved_nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 256px));
   gap: 1rem;
-  justify-content: center;
 }
 
 .get_involved_nav a {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   min-width: var(--min-touch);
   min-height: var(--min-touch);
-  padding: 1rem;
+  width: 100%;
+  padding: 1rem 1rem 1rem 0.5rem;
   border: none;
   background: var(--🎨primary);
   color: var(--🎨primary_text1);
@@ -24,7 +25,18 @@
   text-decoration: none;
 }
 
+.get_involved_nav svg {
+  width: 2rem;
+  height: 2rem;
+}
+
 .get_involved_nav :global(a.active) {
   background: var(--🎨secondary);
   color: var(--🎨secondary_text1);
+}
+
+@media (min-width: 512px) {
+  .get_involved_nav {
+    grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  }
 }
