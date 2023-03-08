@@ -66,6 +66,11 @@ body > * {
     1fr;
 }
 
+.full_bleed.fill {
+  background: var(--🎨primary);
+  color: (--🎨primary_text1);
+}
+
 .full_bleed > * {
   grid-column: center;
 }

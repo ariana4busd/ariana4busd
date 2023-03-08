@@ -1,88 +1,88 @@
 .section h1 {
   font-size: 3rem;
   color: var(--🎨primary);
+  margin-block: 1rem;
+}
+
+.section picture {
+  position: relative;
+  width: 100vw;
+  max-height: 420px;
+  margin-inline: -1rem;
+  margin-block-end: 1rem;
+}
+
+.section picture:global(.left) {
+  float: left;
+}
+
+.section picture:global(.right) {
+  float: right;
 }
 
 .section:last-of-type {
   margin-block-end: 8rem;
 }
 
-.float_left {
-  float: left;
+.section.edu {
+  background: var(--🎨primary);
+  color: var(--🎨primary_text1);
+  padding-block-end: 2rem;
 }
 
-.stagger {
+.section.edu h1 {
+  color: var(--🎨primary_accent);
+}
+
+.film_strip {
   display: flex;
   gap: 1rem;
-  margin-block: 1rem;
-  align-items: flex-start;
 }
 
-.stagger.reverse {
-  flex-direction: row-reverse;
+.film_strip > picture {
+  height: 320px;
 }
 
-.stagger picture {
-  position: relative;
-  margin-block-start: 1rem;
+.pic_bg1 {
+  aspect-ratio: 181/145;
 }
 
-.bg1 {
-  flex-shrink: 0.75;
-  width: 512px;
-  aspect-ratio: 720/580;
+.pic_bg2 {
+  aspect-ratio: 3/4;
 }
 
-.bg1 img {
-  object-fit: cover;
-  object-position: bottom right;
+.pic_bg3 {
+  aspect-ratio: 4/3;
 }
 
-.bg2 {
-  flex-shrink: 0.75;
-  width: 256px;
-  aspect-ratio: 720/960;
+.pic_edu {
+  aspect-ratio: 2/3;
 }
 
-.bg2 img {
-  object-fit: cover;
-}
-
-.bg3 {
-  flex-shrink: 0.75;
-  width: 512px;
-  aspect-ratio: 640/480;
-}
-
-.bg3 img {
-  object-fit: cover;
-  object-position: bottom left;
-}
-
-.educationx {
-  flex-shrink: 0.75;
-  width: 512px;
-  aspect-ratio: 640/960;
-}
-
-.experiencex {
-  flex-shrink: 0.1;
-  width: clamp(128px, 100vw, 256px);
-  aspect-ratio: 1024/1280;
-}
-
-.experiencex img {
-  /* object-fit: cover; */
-  object-fit: contain;
-}
-
-picture.experience {
-  display: flex;
-  position: relative;
-  width: 320px;
+.pic_exp {
   aspect-ratio: 4/5;
 }
 
-picture.experience img {
-  object-fit: contain;
+@media (min-width: 640px) {
+  .section {
+    margin-block-end: 4rem;
+  }
+
+  .edu {
+    padding-block-start: 2rem;
+  }
+
+  .section picture {
+    position: relative;
+    width: clamp(128px, 50vw, 320px);
+    margin: 0;
+  }
+
+  .section picture:global(.left) {
+    margin: 1rem 2rem 1rem 0;
+  }
+
+  .section picture:global(.right) {
+    margin: 1rem 0 1rem 2rem;
+  }
 }
