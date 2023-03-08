@@ -1,16 +1,33 @@
 .section {
   display: grid;
+  grid-template:
+    "content"
+    "map"
+    /1fr;
+  gap: 1rem;
+  align-content: start;
+  min-height: 50vh;
+  margin-block-end: 4rem;
 }
 
-.register {
-  justify-self: center;
+.vote {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  justify-items: center;
+}
+
+.vote p {
+  max-width: var(--max-narrow-width);
+}
+
+.vote a {
   display: inline-flex;
   place-items: center;
   gap: 1rem;
   min-width: var(--min-touch);
   min-height: var(--min-touch);
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-  margin-block: 2rem;
   background: var(--🎨secondary);
   color: var(--🎨secondary_text1);
   border-radius: 0.75rem;
@@ -19,21 +36,44 @@
   text-decoration: none;
 }
 
-.register svg {
+.vote svg {
   width: 1.5rem;
   height: 1.5rem;
   margin-inline-start: -0.75rem;
 }
 
 .district_map {
-  justify-self: center;
   position: relative;
-  width: 100%;
-  max-width: 1024px;
+  width: 100vw;
+  margin-block: 1rem;
+  margin-inline: -1rem;
   aspect-ratio: 1145/648;
+  border-color: var(--🎨primary);
+  border-width: 4px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  overflow: hidden;
 }
 
 .district_map img {
-  border: 4px solid var(--🎨primary);
   object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    grid-template:
+      "content map" auto
+      / 1fr 1.5fr;
+    gap: 0 2rem;
+  }
+
+  .register {
+    justify-self: start;
+  }
+
+  .district_map {
+    width: 100%;
+    border-style: solid;
+    border-radius: 1rem;
+  }
 }
