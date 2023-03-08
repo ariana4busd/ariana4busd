@@ -71,6 +71,11 @@
   aspect-ratio: 3/4;
 }
 
+.intro b {
+  font-style: italic;
+  color: var(--🎨page_text1);
+}
+
 .vote {
   border-top: 4px dashed var(--🎨page_accent);
   display: grid;

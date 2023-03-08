@@ -49,13 +49,22 @@ export default function Home() {
             I have established successful working relationships with various
             stakeholders including parents, school staff, service providers, and
             community members to assess and support the specialized needs of
-            children and families.
+            children and families. When we all work together, we can create a
+            culture that nurtures success for our students.
           </p>
           <p>
             I have research experience in education, psychology, and social
-            work. I hope to utilize my knowledge of the education system, my
-            Child Welfare experience, and my skills as a Licensed Clinical
-            Social Worker to ensure success for our school district.
+            work. Research indicates that Social Emotional Learning contributes
+            to higher academic achievement, improved mental health, and greater
+            career success. Now more than ever is the opportunity to build on
+            sources of support like the Wellness Center to make a positive
+            difference on our students{"'"} mental health. I want to help every
+            student feel included so they are safe to learn, safe to contribute,
+            and safe to challenge the status quo. I hope to utilize my knowledge
+            of the education system, my Child Welfare experience, and my
+            socioemotional skills as a Licensed Clinical Social Worker to ensure
+            we are <b>Thriving Together Toward Student Success</b> as a school
+            district.
           </p>
         </div>
       </section>
