@@ -1,4 +1,37 @@
 .section {
   max-width: var(--max-narrow-width);
+  min-height: 50vh;
   margin-inline: auto;
+  margin-block-end: 4rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  accent-color: var(--🎨secondary);
+}
+
+.form label {
+  display: inline-grid;
+  font-weight: 600;
+}
+
+.form input {
+  min-height: var(--min-touch);
+  min-width: var(--min-touch);
+  font-size: 1.125rem;
+}
+
+.form button[type="submit"] {
+  justify-self: center;
+  min-height: var(--min-touch);
+  min-width: var(--min-touch);
+  padding: 1rem 2rem;
+  margin-block: 1rem;
+  background: var(--🎨secondary);
+  color: var(--🎨secondary_text1);
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
 }

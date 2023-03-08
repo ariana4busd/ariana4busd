@@ -1,5 +1,4 @@
 "use client";
-import cssf from "@support/form.module.css";
 import css from "@request-sign/page.module.css";
 
 export default function RequestSign() {
@@ -27,7 +26,6 @@ export default function RequestSign() {
 
   return (
     <section className={css.section}>
-      <h1>Request Yard Sign</h1>
       <p>
         Show your support with a free yard sign! They really do help get the
         word out. We’ll even do the heavy lifting by placing it in your yard in
@@ -35,8 +33,8 @@ export default function RequestSign() {
         shortly after the election. Submit your information below and we’ll do
         the rest.
       </p>
-      <form className={cssf.form} onSubmit={handleSubmit}>
-        <label className={cssf.name}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <label>
           <span>Name</span>
           <input name="name" type="text" />
         </label>
