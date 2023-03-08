@@ -63,8 +63,8 @@ a.top_nav_cta {
   justify-self: end;
   margin-top: 5rem;
   margin-inline-end: 0rem;
-  background: var(--🎨secondary);
-  color: var(--🎨primary_text1);
+  background: var(--🎨primary_accent);
+  color: var(--🎨primary);
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
   padding-inline: 2rem 1rem;
