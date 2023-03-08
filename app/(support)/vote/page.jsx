@@ -1,6 +1,7 @@
 import css from "@vote/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "@app/icon";
 
 export default function Vote() {
   return (
@@ -28,6 +29,7 @@ export default function Vote() {
       >
         <Image src="/vote.png" alt="" width={64} height={64} />
         Register to Vote
+        <Icon id="ic_ext_link" />
       </Link>
 
       <picture className={css.district_map}>

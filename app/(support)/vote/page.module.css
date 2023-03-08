@@ -4,7 +4,7 @@
 
 .register {
   justify-self: center;
-  display: flex;
+  display: inline-flex;
   place-items: center;
   gap: 1rem;
   min-width: var(--min-touch);
@@ -17,6 +17,12 @@
   font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
+}
+
+.register svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline-start: -0.75rem;
 }
 
 .district_map {

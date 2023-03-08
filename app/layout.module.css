@@ -34,9 +34,16 @@
 }
 
 .top_nav a {
+  display: inline-flex;
+  gap: 0.5ch;
   padding: 0.5rem;
   font-weight: 700;
   font-size: 1.125rem;
+}
+
+.top_nav a svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .top_nav_home {

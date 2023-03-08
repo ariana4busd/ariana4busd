@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
               <Link href="/about">About</Link>
               <Link href="https://secure.fundhero.com/ariana-martinez-for-benicia-school-board-2023">
                 Donate
+                <Icon id="ic_ext_link" />
               </Link>
             </div>
             <Link className={cn(css.top_nav_cta, ctaActiveCn)} href="/vote">
