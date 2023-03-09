@@ -68,3 +68,20 @@
   padding-block: 2rem 1rem;
   color: var(--🎨primary);
 }
+
+.form output {
+  display: flex;
+  align-items: center;
+  
+  min-height: var(--min-touch);
+  padding: 1rem;
+  margin-block-start: 2rem;
+  background: var(--🎨primary_accent);
+  color: var(--🎨primary);
+  border: 1px solid var(--🎨secondary);
+  border-radius: 0.5rem;
+}
+
+.form output:empty {
+  opacity: 0;
+}

@@ -3,11 +3,14 @@ import cssf from "@support/form.module.css";
 import css from "@volunteer/page.module.css";
 
 export default function Volunteer() {
+  const [formStatus, setFormStatus] = useState("");
   // TODO validate volunteer form
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
+
+    setFormStatus("Submitting Form...")
     const response = await fetch("/api/contact-form", {
       method: "POST",
       headers: {
@@ -23,7 +26,7 @@ export default function Volunteer() {
         helpOther: form.help_other.value,
       }),
     });
-
+    setFormStatus("Form received.")
     console.log(response.status);
   };
 

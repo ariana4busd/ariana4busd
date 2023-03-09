@@ -1,12 +1,15 @@
 "use client";
 import css from "@request-sign/page.module.css";
+import { useState } from "react";
 
 export default function RequestSign() {
+  const [formStatus, setFormStatus] = useState("");
   // TODO validate yard sign request form
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
+    setFormStatus("Submitting Form...")
     const response = await fetch("/api/contact-form", {
       method: "POST",
       headers: {
@@ -21,6 +24,7 @@ export default function RequestSign() {
       }),
     });
 
+    setFormStatus("Form received.")
     console.log(response.status);
   };
 
@@ -54,6 +58,7 @@ export default function RequestSign() {
           <input name="address" type="text" />
         </label>
 
+        <output>{formStatus}</output>
         <button type="submit">Submit</button>
       </form>
     </section>
