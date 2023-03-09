@@ -131,6 +131,10 @@ export default function Home() {
             <dd></dd>
           </div>
           <div className={css.endorsement}>
+            <dt>California School Employee Association Benicia Chapter 1096</dt>
+            <dd></dd>
+          </div>
+          <div className={css.endorsement}>
             <dt>Bill Dodd</dt>
             <dd>California State Senator</dd>
           </div>
