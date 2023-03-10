@@ -1,6 +1,6 @@
 "use client";
-import cssf from "@support/form.module.css";
 import css from "@volunteer/page.module.css";
+import { useState } from "react";
 
 export default function Volunteer() {
   const [formStatus, setFormStatus] = useState("");
@@ -10,7 +10,7 @@ export default function Volunteer() {
     event.preventDefault();
     const form = event.target;
 
-    setFormStatus("Submitting Form...")
+    setFormStatus("Submitting Form...");
     const response = await fetch("/api/contact-form", {
       method: "POST",
       headers: {
@@ -26,7 +26,7 @@ export default function Volunteer() {
         helpOther: form.help_other.value,
       }),
     });
-    setFormStatus("Form received.")
+    setFormStatus("Form received.");
     console.log(response.status);
   };
 
@@ -83,6 +83,7 @@ export default function Volunteer() {
           </label>
         </fieldset>
 
+        <output>{formStatus}</output>
         <button type="submit">Submit</button>
       </form>
     </section>
