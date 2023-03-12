@@ -1,9 +1,9 @@
 "use client";
+import { Icon } from "@app/icon";
 import css from "@support/layout.module.css";
 import { cn } from "@utils/classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Icon } from "../icon";
 
 export default function GetInvolvedLayout({ children }) {
   const pathname = usePathname();
@@ -16,19 +16,28 @@ export default function GetInvolvedLayout({ children }) {
       <header className={css.get_involved}>
         <h1>I would like to...</h1>
         <nav className={css.get_involved_nav}>
-          <Link className={cn({ active: isVotePath })} href="/vote">
-            <Icon id={isVotePath ? "ic_checked" : "ic_unchecked"} />
+          <Link
+            className={cn({ active: isVotePath })}
+            href="/vote"
+            replace={true}
+          >
+            <CheckIcon checked={isVotePath} />
             Vote
           </Link>
           <Link
             className={cn({ active: isRequestSignPath })}
             href="/request-sign"
+            replace={true}
           >
-            <Icon id={isRequestSignPath ? "ic_checked" : "ic_unchecked"} />
+            <CheckIcon checked={isRequestSignPath} />
             Request Yard Sign
           </Link>
-          <Link className={cn({ active: isVolunteerPath })} href="/volunteer">
-            <Icon id={isVolunteerPath ? "ic_checked" : "ic_unchecked"} />
+          <Link
+            className={cn({ active: isVolunteerPath })}
+            href="/volunteer"
+            replace={true}
+          >
+            <CheckIcon checked={isVolunteerPath} />
             Volunteer
           </Link>
         </nav>
@@ -36,4 +45,8 @@ export default function GetInvolvedLayout({ children }) {
       {children}
     </>
   );
+}
+
+function CheckIcon({ checked }) {
+  return <Icon id={checked ? "ic_checked" : "ic_unchecked"} />;
 }
