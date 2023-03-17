@@ -135,6 +135,10 @@ export default function Home() {
             <dd></dd>
           </div>
           <div className={css.endorsement}>
+            <dt>Napa-Solano Central Labor Council </dt>
+            <dd></dd>
+          </div>
+          <div className={css.endorsement}>
             <dt>Bill Dodd</dt>
             <dd>California State Senator</dd>
           </div>
@@ -180,6 +184,16 @@ export default function Home() {
           <div className={css.endorsement}>
             <dt>Gary Wing</dt>
             <dd>Former Benicia Unified School Board Member</dd>
+          </div>
+          <div className={css.endorsement}>
+            <dt>Jack Flynn</dt>
+            <dd>
+              Fairfield-Suisun Unified School District School Board Member
+            </dd>
+          </div>
+          <div className={css.endorsement}>
+            <dt>Dan Smith</dt>
+            <dd>Former Benicia City Council Member</dd>
           </div>
         </dl>
       </section>
