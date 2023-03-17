@@ -1,3 +1,6 @@
+import css from "@icons/icon-symbols.module.css";
+import { cn } from "@utils/classnames";
+
 export function IconSymbols() {
   return (
     <svg className="svg_symbols">
@@ -92,6 +95,18 @@ export function IconSymbols() {
           strokeLinejoin="round"
           d="M9 12.75L11.25 15 15 9.75"
         />
+      </symbol>
+
+      <symbol
+        id="ic_loading"
+        className={cn("ic_loading", css.loading)}
+        fill="currentColor"
+        strokeWidth={3}
+        viewBox="0 0 24 24"
+      >
+        <rect x="1" y="1" width="6" height="22" />
+        <rect x="9" y="1" width="6" height="22" />
+        <rect x="17" y="1" width="6" height="22" />
       </symbol>
     </svg>
   );

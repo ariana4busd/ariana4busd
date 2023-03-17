@@ -1,8 +1,8 @@
 import css from "@app/page.module.css";
+import { Icon } from "@icons/icon";
 import { cn } from "@utils/classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { Icon } from "./icon";
 
 export const metadata = {
   title: "Ariana for School Board",

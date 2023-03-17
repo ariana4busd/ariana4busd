@@ -1,5 +1,5 @@
 "use client";
-import { Icon } from "@app/icon";
+import { Icon } from "@icons/icon";
 import css from "@support/layout.module.css";
 import { cn } from "@utils/classnames";
 import Link from "next/link";

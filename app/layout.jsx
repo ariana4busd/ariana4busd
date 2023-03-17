@@ -1,8 +1,8 @@
 "use client";
 import "@app/globals.css";
-import { Icon } from "@app/icon";
-import { IconSymbols } from "@app/icon-symbols";
 import css from "@app/layout.module.css";
+import { Icon } from "@icons/icon";
+import { IconSymbols } from "@icons/icon-symbols";
 import { cn } from "@utils/classnames";
 import Image from "next/image";
 import Link from "next/link";

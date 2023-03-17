@@ -1,0 +1,23 @@
+.loading > rect {
+  animation: rect_loading 0.8s linear infinite;
+  animation-delay: -0.8s;
+}
+
+.loading > rect:nth-child(2) {
+  animation-delay: -0.65s;
+}
+.loading > rect:last-child {
+  animation-delay: -0.5s;
+}
+
+@keyframes rect_loading {
+  0% {
+    y: 1px;
+    height: 22px;
+  }
+  93.75% {
+    y: 5px;
+    height: 14px;
+    opacity: 0.2;
+  }
+}

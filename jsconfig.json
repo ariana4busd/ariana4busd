@@ -3,6 +3,7 @@
     "paths": {
       "~/*": ["./*"],
       "@app/*": ["./app/*"],
+      "@icons/*": ["./icons/*"],
       "@about/*": ["./app/about/*"],
       "@support/*": ["./app/(support)/*"],
       "@vote/*": ["./app/(support)/vote/*"],
