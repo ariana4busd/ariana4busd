@@ -1,10 +1,10 @@
-.form {
+.layout {
   display: grid;
   gap: 1rem;
   accent-color: var(--🎨secondary);
 }
 
-.form fieldset {
+.layout fieldset {
   display: grid;
   justify-items: start;
   gap: 0.5rem;
@@ -13,23 +13,28 @@
   margin: 0;
 }
 
-.form fieldset legend {
-  font-size: 1.75rem;
+.layout fieldset legend {
+  padding: 0;
+  line-height: 4rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
-.form label {
+.layout label {
   display: inline-grid;
   font-weight: 600;
 }
 
-.form input:not([type="checkbox"]) {
+.layout input:not([type="checkbox"]) {
   min-height: var(--min-touch);
   min-width: var(--min-touch);
-  font-size: 1.125rem;
+  font-size: 1rem;
+  padding-inline: 0.5rem;
+  border: 1px solid var(--🎨page_text2);
+  border-radius: 0.5rem;
 }
 
-.form label:has(input[type="checkbox"]) {
+.layout label:has(input[type="checkbox"]) {
   display: grid;
   grid-template:
     "btn label" var(--min-touch)
@@ -40,21 +45,40 @@
   margin-inline-start: calc(-0.25 * var(--min-touch));
 }
 
-.form input[type="checkbox"] {
+.layout input[type="checkbox"] {
   place-self: center;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.form button[type="submit"] {
+.submit_button {
   justify-self: center;
-  min-height: var(--min-touch);
+  width: 75%;
   min-width: var(--min-touch);
-  padding: 1rem 2rem;
+  max-width: 256px;
+  min-height: var(--min-touch);
+  padding: 0;
+  margin: 0;
+  margin-block-start: 2rem;
+  border: none;
+  background: none;
+
   background: var(--🎨secondary);
   color: var(--🎨secondary_text1);
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 10rem;
+
   font-size: 1.125rem;
   font-weight: 700;
+
+  overflow: hidden;
+}
+
+.submit_button:disabled {
+  color: inherit;
+}
+
+.submit_button svg {
+  width: 2rem;
+  height: 2rem;
 }

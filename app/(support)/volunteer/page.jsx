@@ -1,34 +1,13 @@
 "use client";
 import css from "@volunteer/page.module.css";
+import { Form } from "@support/form";
 import { useState } from "react";
 
 export default function Volunteer() {
-  const [formStatus, setFormStatus] = useState("");
-  // TODO validate volunteer form
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const form = event.target;
-
-    setFormStatus("Submitting Form...");
-    const response = await fetch("/api/contact-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        shareInfo: form.share_info.checked,
-        hostMeetAndGreet: form.host_meet_greet.checked,
-        helpUnsure: form.help_unsure.checked,
-        helpOther: form.help_other.value,
-      }),
-    });
-    setFormStatus("Form received.");
-    console.log(response.status);
-  };
+  const [shareInfo, setShareInfo] = useState(false);
+  const [hostMeetAndGreet, setHostMeetAndGreet] = useState(false);
+  const [helpUnsure, setHelpUnsure] = useState(false);
+  const [helpOther, setHelpOther] = useState("");
 
   return (
     <section className={css.section}>
@@ -40,36 +19,33 @@ export default function Volunteer() {
         opportunities based on your selection(s).
       </p>
 
-      <form className={css.form} onSubmit={handleSubmit}>
-        <label>
-          <span>Name</span>
-          <input name="name" type="text" />
-        </label>
-
-        <label>
-          <span>Email</span>
-          <input name="email" type="email" />
-        </label>
-
-        <label>
-          <span>Phone</span>
-          <input name="phone" type="tel" />
-        </label>
-
+      <Form data={{ shareInfo, hostMeetAndGreet, helpUnsure, helpOther }}>
         <fieldset name="help">
           <legend>I want to help by...</legend>
           <label>
-            <input name="share_info" type="checkbox" />
+            <input
+              name="share_info"
+              type="checkbox"
+              onChange={(e) => setShareInfo(e.target.value)}
+            />
             <span>Sharing information with friends and neighbors</span>
           </label>
 
           <label>
-            <input name="host_meet_greet" type="checkbox" />
+            <input
+              name="host_meet_greet"
+              type="checkbox"
+              onChange={(e) => setHostMeetAndGreet(e.target.value)}
+            />
             <span>Hosting a meet-and-greet</span>
           </label>
 
           <label>
-            <input name="help_unsure" type="checkbox" />
+            <input
+              name="help_unsure"
+              type="checkbox"
+              onChange={(e) => setHelpUnsure(e.target.value)}
+            />
             <span>
               I{"'"}m not sure, but I{"'"}m still interested in helping
             </span>
@@ -78,14 +54,16 @@ export default function Volunteer() {
           <label>
             <input type="checkbox" />
             <div>
-              <input name="help_other" type="text" placeholder="Other" />
+              <input
+                name="help_other"
+                type="text"
+                placeholder="Other"
+                onChange={(e) => setHelpOther(e.target.value)}
+              />
             </div>
           </label>
         </fieldset>
-
-        <output>{formStatus}</output>
-        <button type="submit">Submit</button>
-      </form>
+      </Form>
     </section>
   );
 }
