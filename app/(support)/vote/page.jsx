@@ -1,7 +1,7 @@
+import { Icon } from "@icons/icon";
 import css from "@vote/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Icon } from "@app/icon";
 
 export default function Vote() {
   return (
